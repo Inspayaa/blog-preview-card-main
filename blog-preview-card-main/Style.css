@@ -157,5 +157,7 @@ footer {
 }
 
 @media (min-width: 1440px) {
-    width: clamp(560px, 100%, 640px);
+    .container {
+        width: clamp(560px, 100%, 640px);
+    }
 }

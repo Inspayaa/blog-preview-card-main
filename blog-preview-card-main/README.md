@@ -33,6 +33,9 @@ See hover and focus states for all interactive elements on the page
 Experience a stepped, neo-brutalist hover animation on the main card
 
 Screenshot
+![Blog preview card in MS Edge](<Screenshot (471).png>)
+![Blog preview card in MS Edge inspection mode 1440px width](<Screenshot (472).png>)
+![Blog preview card in MS Edge inspection mode 375px width(Mobile)](<Screenshot (473).png>)
 (Note: Replace ./screenshot.jpg with the actual path to your screenshot)
 
 Links
