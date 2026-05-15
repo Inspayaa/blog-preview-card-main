@@ -18,7 +18,7 @@
     --White: hsl(0, 0%, 100%);
     --Gray-500: hsl(0, 0%, 42%);
     --Gray-950: hsl(0, 0%, 7%);
-    --Gray-950b: rgba(0, 0, 0, 0.60);
+    --Gray-950b: rgba(0, 0, 0, 0.5);
 }
 
 body, .attribution {
@@ -42,12 +42,12 @@ body {
     border-radius: 15px;
     border: 1.34px solid var(--Gray-950);
     padding: 1rem;
-    animation: shadowExit 0.4s ease forwards;
+    animation: shadowExit 0.7s ease forwards;
 }
 
 .container:hover {
     cursor: pointer;
-    animation: shadowEnter 0.4s ease forwards;
+    animation: shadowEnter 0.7s ease forwards;
     .title {
         color: var(--Yellow);
     }
@@ -157,6 +157,5 @@ footer {
 }
 
 @media (min-width: 1440px) {
-    min-width: 560px;
-    max-width: 640px;
+    width: clamp(560px, 100%, 640px);
 }
