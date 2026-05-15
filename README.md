@@ -41,7 +41,7 @@ Screenshot
 Links
 Solution URL: [GitHub](https://github.com/Inspayaa/blog-preview-card-main.git)
 
-Live Site URL: Add live site URL here
+Live Site URL: [Github Pages](https://inspayaa.github.io/blog-preview-card-main/)
 
 My process
 Built with
@@ -56,43 +56,59 @@ Vanilla CSS
 Advanced CSS Animations (@keyframes)
 
 What I learned
-The biggest takeaway from this project was mastering complex CSS animations to create a specific, mechanical "stepped" shadow effect. Initially, I tried using standard CSS transition properties, but I realized that transitions only smoothly interpolate between two states.
-
-To achieve a snappy, multi-layered shadow that shoots out a transparent preview before turning solid, I learned how to combine stacked box-shadow properties with @keyframes and the steps() timing function to eliminate browser smoothing entirely.
+The biggest takeaway from this project was mastering complex CSS animations to create a specific shadow effect. Initially, I tried using standard CSS transition properties, but I realized that transitions only smoothly interpolate between two states.
 
 Here is the CSS I'm most proud of, which creates that rigid, frame-by-frame pop effect:
 
 CSS
 .container {
-    /* Base resting state */
-    box-shadow: 6px 6px 0px var(--Gray-950);
-    
-    /* Using steps(1, end) to completely disable smooth interpolation */
-    animation: shadowExit 0.3s steps(1, end) forwards;
+   animation: shadowExit 0.7s ease forwards;
 }
 
 .container:hover {
-    animation: shadowEnter 0.3s steps(1, end) forwards;
+        animation: shadowEnter 0.7s ease forwards;
+    .title {
+        color: var(--Yellow);
+    }
 }
 
 @keyframes shadowEnter {
-    0% {
-        box-shadow: 6px 6px 0px var(--Gray-950);
-        transform: translate(0, 0);
+    0%, 25%{
+        box-shadow: 5px 5px 0px var(--Gray-950);
     }
-    /* Instantly snaps to a semi-transparent preview frame */
-    33% {
-        box-shadow: 
-            6px 6px 0px var(--Gray-950),
-            14px 14px 0px hsla(0, 0%, 7%, 0.25);
-        transform: translate(-2px, -2px);
+
+    26%, 50%{
+        box-shadow: 7px 7px 0px var(--Gray-950b);
     }
-    /* Instantly snaps to the solid final frame */
-    66%, 100% {
+
+    51%, 75%{
+        box-shadow: 10px 10px 0px var(--Gray-950b);
+    }
+    
+    76%, 100%{
         box-shadow: 12px 12px 0px var(--Gray-950);
-        transform: translate(-2px, -2px);
     }
 }
+
+
+@keyframes shadowExit {
+    0%, 25% {
+        box-shadow: 13px 13px 0px var(--Gray-950);
+    }
+
+    26%, 50% {
+       box-shadow: 11px 11px 0px var(--Gray-950b);
+    }
+
+    51%, 75% {   
+       box-shadow: 9px 9px 0px var(--Gray-950b);
+    }
+
+    76%, 100% {
+        box-shadow: 6px 6px 0px var(--Gray-950);
+    }
+}
+
 Continued development
 Moving forward, I want to continue exploring neo-brutalist design trends and how to push vanilla CSS to handle complex, staged animations without relying on heavy JavaScript libraries. I also plan to focus more on combining transform properties with layout shifts for more tactile user interfaces.
 
