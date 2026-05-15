@@ -39,7 +39,7 @@ Screenshot
 (Note: Replace ./screenshot.jpg with the actual path to your screenshot)
 
 Links
-Solution URL: Add solution URL here
+Solution URL: [GitHub](https://github.com/Inspayaa/blog-preview-card-main.git)
 
 Live Site URL: Add live site URL here
 
